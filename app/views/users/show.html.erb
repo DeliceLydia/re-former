@@ -1,0 +1,17 @@
+<h1>User</h1>
+<table>
+    <tr>
+        <th>Username</th>
+        <td><%= @user.username %></td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td><%= @user.email %></td>
+    </tr>
+</table>
+
+<%= link_to("Edit User", edit_user_path(@user), :class => 'link') %>
+
+<%= link_to("Delete User", delete_user_path(@user), :class => 'link') %>
+
+<%= link_to("All Users", users_path, :class => 'link') %>

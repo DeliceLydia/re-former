@@ -1,0 +1,11 @@
+<h1>Users</h1>
+
+<%= link_to("Add New User", new_user_path, :class => 'link') %>
+
+<ul>
+    <% @users.each do |user| %>
+        <li>
+        <%= link_to user.username, user_path(user), :class => 'link' %>
+        </li>
+    <% end %>
+</ul>
