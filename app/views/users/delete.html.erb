@@ -1,0 +1,14 @@
+<h1>Delete User</h1>
+
+<%= link_to("All Users", users_path, :class => 'link') %>
+
+<%= form_for(@user, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this user?</p>
+    <p><%= @user.username %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete User") %>
+    </div>
+
+  <% end %>
